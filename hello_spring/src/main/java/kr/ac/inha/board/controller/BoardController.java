@@ -7,16 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BoardController {
 	@RequestMapping("/hello") //hello를 요청받으면 실행
-	public String hello() {
-		return "hello world!!";
-	}
-	@RequestMapping("/inha") // 동일한 매핑이 있으면 실행이 안됨
-	public String inha(String param) { // 메서드명은 상관이 없음
-		return param + "inha.ac.kr";	
-		// get방식은 ?로 받음
-	}
-	@RequestMapping("/name")
-	public String name(String id) {
-		return "당신의 학번은 " + id+"입니다.";	
+	public String hello(String num) {
+		return num+"*1=2"+" "+num+"*2=4"+" "+num+"*3=6"+" "+num+"*4=8"+" "+num+"*5=10"+" "+num+"*6=12"+" "+num+"*7=14"+" "+num+"*8=16"+" "+num+"*9=18";	
 	}
 }
